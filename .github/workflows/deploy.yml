@@ -16,6 +16,6 @@ jobs:
         uses: northflank/deploy-to-northflank@v1.0.0
         with:
           northflank-api-key: ${{ secrets.NORTHFLANK_API_KEY }}
-          project-id: palmDetection      # project-id كما يظهر في رابط Northflank
-          service-id: palmDetection      # service-id كما يظهر في رابط Northflank
-          image-path: registry.northflank.com/palmDetection/palmDetection:latest
+          project-id: palmdetection
+          service-id: palmDetection
+          image-path: registry.northflank.com/palmdetection/palmDetection:latest
