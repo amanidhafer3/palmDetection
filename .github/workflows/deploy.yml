@@ -1,0 +1,20 @@
+﻿name: Deploy to Northflank
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Northflank
+        uses: northflank/deploy-to-northflank@v1.0.0
+        with:
+          project: palmDetection
+          service: palmDetection
+          api-key: ${{ secrets.NORTHFLANK_API_KEY }}
